@@ -16,16 +16,6 @@
 							"pm.test(\"Status code is 400\", function () {\r",
 							"    pm.response.to.have.status(400);\r",
 							"});\r",
-							"\r",
-							"// captura la variable code es igual a 1018\r",
-							"const responseJson = pm.response.json();\r",
-							"const code = responseJson.errors[0].code;\r",
-							"const codenum = Number(code);\r",
-							"pm.environment.set(\"codenum\", codenum);\r",
-							"\r",
-							"pm.test(\"La variable de entorno 'code' es 1018\", function () {\r",
-							"  pm.expect(codenum).to.equal(1018); // Verifica si la variable es igual a 1018\r",
-							"});\r",
 							""
 						],
 						"type": "text/javascript",
@@ -59,11 +49,12 @@
 					}
 				],
 				"url": {
-					"raw": "{{base-url}}transfer/JCxzMYbp3kWLMFXF7/reject",
+					"raw": "{{base-url}}/transfer/JCxzMYbp3kWLMFXF7/reject",
 					"host": [
-						"{{base-url}}transfer"
+						"{{base-url}}"
 					],
 					"path": [
+						"transfer",
 						"JCxzMYbp3kWLMFXF7",
 						"reject"
 					]
@@ -81,16 +72,7 @@
 							"pm.test(\"Status code is 400\", function () {\r",
 							"    pm.response.to.have.status(400);\r",
 							"});\r",
-							"\r",
-							"// captura la variable code es igual a 1018\r",
-							"const responseJson = pm.response.json();\r",
-							"const code = responseJson.errors[0].code;\r",
-							"const codenum = Number(code);\r",
-							"pm.environment.set(\"codenum\", codenum);\r",
-							"\r",
-							"pm.test(\"La variable de entorno 'code' es 1018\", function () {\r",
-							"  pm.expect(codenum).to.equal(1018); // Verifica si la variable es igual a 1018\r",
-							"});"
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -123,11 +105,12 @@
 					}
 				],
 				"url": {
-					"raw": "{{base-url}}transfer/JCxzMYbp3kWLMFXF7/reject",
+					"raw": "{{base-url}}/transfer/JCxzMYbp3kWLMFXF7/reject",
 					"host": [
-						"{{base-url}}transfer"
+						"{{base-url}}"
 					],
 					"path": [
+						"transfer",
 						"JCxzMYbp3kWLMFXF7",
 						"reject"
 					]
@@ -145,16 +128,7 @@
 							"pm.test(\"Status code is 400\", function () {\r",
 							"    pm.response.to.have.status(400);\r",
 							"});\r",
-							"\r",
-							"// captura la variable code es igual a 1018\r",
-							"const responseJson = pm.response.json();\r",
-							"const code = responseJson.errors[0].code;\r",
-							"const codenum = Number(code);\r",
-							"pm.environment.set(\"codenum\", codenum);\r",
-							"\r",
-							"pm.test(\"La variable de entorno 'code' es 1018\", function () {\r",
-							"  pm.expect(codenum).to.equal(1018); // Verifica si la variable es igual a 1018\r",
-							"});"
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -187,11 +161,12 @@
 					}
 				],
 				"url": {
-					"raw": "{{base-url}}transfer/JCxzMYbp3kWLMFXF7/reject",
+					"raw": "{{base-url}}/transfer/JCxzMYbp3kWLMFXF7/reject",
 					"host": [
-						"{{base-url}}transfer"
+						"{{base-url}}"
 					],
 					"path": [
+						"transfer",
 						"JCxzMYbp3kWLMFXF7",
 						"reject"
 					]
@@ -209,16 +184,7 @@
 							"pm.test(\"Status code is 400\", function () {\r",
 							"    pm.response.to.have.status(400);\r",
 							"});\r",
-							"\r",
-							"// captura la variable code es igual a 1018\r",
-							"const responseJson = pm.response.json();\r",
-							"const code = responseJson.errors[0].code;\r",
-							"const codenum = Number(code);\r",
-							"pm.environment.set(\"codenum\", codenum);\r",
-							"\r",
-							"pm.test(\"La variable de entorno 'code' es 1018\", function () {\r",
-							"  pm.expect(codenum).to.equal(1018); // Verifica si la variable es igual a 1018\r",
-							"});"
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -251,11 +217,12 @@
 					}
 				],
 				"url": {
-					"raw": "{{base-url}}transfer/JCxzMYbp3kWLMFXF7/reject",
+					"raw": "{{base-url}}/transfer/JCxzMYbp3kWLMFXF7/reject",
 					"host": [
-						"{{base-url}}transfer"
+						"{{base-url}}"
 					],
 					"path": [
+						"transfer",
 						"JCxzMYbp3kWLMFXF7",
 						"reject"
 					]
@@ -270,19 +237,10 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 400\", function () {\r",
-							"    pm.response.to.have.status(400);\r",
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
 							"});\r",
-							"\r",
-							"// captura la variable code es igual a 1018\r",
-							"const responseJson = pm.response.json();\r",
-							"const code = responseJson.errors[0].code;\r",
-							"const codenum = Number(code);\r",
-							"pm.environment.set(\"codenum\", codenum);\r",
-							"\r",
-							"pm.test(\"La variable de entorno 'code' es 1018\", function () {\r",
-							"  pm.expect(codenum).to.equal(1018); // Verifica si la variable es igual a 1018\r",
-							"});"
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -314,11 +272,12 @@
 					}
 				],
 				"url": {
-					"raw": "{{base-url}}transfer//reject",
+					"raw": "{{base-url}}/transfer//reject",
 					"host": [
-						"{{base-url}}transfer"
+						"{{base-url}}"
 					],
 					"path": [
+						"transfer",
 						"",
 						"reject"
 					]

@@ -62,11 +62,12 @@
 					}
 				],
 				"url": {
-					"raw": "{{base-url}}transfer/JCxzMYbp3kWLMFXF7/reject",
+					"raw": "{{base-url}}/transfer/JCxzMYbp3kWLMFXF7/reject",
 					"host": [
-						"{{base-url}}transfer"
+						"{{base-url}}"
 					],
 					"path": [
+						"transfer",
 						"JCxzMYbp3kWLMFXF7",
 						"reject"
 					]

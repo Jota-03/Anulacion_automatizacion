@@ -50,11 +50,12 @@
 					}
 				],
 				"url": {
-					"raw": "{{base-url}}transfer/{{transferId}}/reject",
+					"raw": "{{base-url}}/transfer/{{transferId}}/reject",
 					"host": [
-						"{{base-url}}transfer"
+						"{{base-url}}"
 					],
 					"path": [
+						"transfer",
 						"{{transferId}}",
 						"reject"
 					]

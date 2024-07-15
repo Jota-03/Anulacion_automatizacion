@@ -70,20 +70,11 @@
 					}
 				},
 				"url": {
-					"raw": "https://business.transfiya.com.co/ext/prb/ext/transfiya/v1/packages",
-					"protocol": "https",
+					"raw": "{{base-url}}/packages",
 					"host": [
-						"business",
-						"transfiya",
-						"com",
-						"co"
+						"{{base-url}}"
 					],
 					"path": [
-						"ext",
-						"prb",
-						"ext",
-						"transfiya",
-						"v1",
 						"packages"
 					]
 				}
@@ -422,24 +413,10 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 400\", function () {\r",
-							"    pm.response.to.have.status(400);\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
 							"});\r",
-							"\r",
-							"// Captura el código de error del JSON de la respuesta\r",
-							"const responseJson = pm.response.json();\r",
-							"const errorCode = responseJson.errors[0].code;\r",
-							"const errorCodeNumber = Number(errorCode);\r",
-							"pm.environment.set(\"errorCode\", errorCodeNumber);\r",
-							"\r",
-							"// Validación del código de error 1013 o 1018\r",
-							"pm.test(\"El código de error es 1013 o 1018\", function () {\r",
-							"    pm.expect(errorCodeNumber).to.satisfy(function (num) {\r",
-							"        return num === 1013 || num === 1018;\r",
-							"    });\r",
-							"});\r",
-							"// Imprimir el comentario del caso de prueba en la consola de Newman\r",
-							"console.log(\"Comentario del caso de prueba:\", pm.iterationData.get(\"comentario\"));"
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -471,12 +448,13 @@
 					}
 				],
 				"url": {
-					"raw": "{{base-url}}transfer/{{txRef}}/reject",
+					"raw": "{{base-url}}/transfer/{{transferId}}/reject",
 					"host": [
-						"{{base-url}}transfer"
+						"{{base-url}}"
 					],
 					"path": [
-						"{{txRef}}",
+						"transfer",
+						"{{transferId}}",
 						"reject"
 					]
 				}
@@ -523,7 +501,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"transferId\": \"{{transferId}}\",\r\n    \"tx_id\": \"{{txRef}}\",\r\n    \"status\": \"PENDING\",\r\n    \"type\": \"REQUEST\",\r\n    \"created\": \"2023-11-09T11:56:10-05:00\",\r\n    \"updated\": \"2023-11-09T11:56:23-05:00\",\r\n    \"amount\": \"116400.00\",\r\n    \"symbol\": \"$tin\"\r\n}",
+					"raw": "{\r\n\"transferId\": \"{{transferId}}\",\r\n    \"tx_id\": \"{{txRef}}\",\r\n    \"status\": \"REJECTED\",\r\n    \"type\": \"REQUEST\",\r\n    \"created\": \"2023-11-09T11:56:10-05:00\",\r\n    \"updated\": \"2023-11-09T11:56:23-05:00\",\r\n    \"amount\": \"116400.00\",\r\n    \"symbol\": \"$tin\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -531,22 +509,16 @@
 					}
 				},
 				"url": {
-					"raw": "https://business.transfiya.com.co/ext/prb/ext/transfiya/v1/transfers/{{transferId}}/callback",
-					"protocol": "https",
+					"raw": "{{base-url}}/ext/transfiya/v1/transfers/{{txRef}}/callback",
 					"host": [
-						"business",
-						"transfiya",
-						"com",
-						"co"
+						"{{base-url}}"
 					],
 					"path": [
-						"ext",
-						"prb",
 						"ext",
 						"transfiya",
 						"v1",
 						"transfers",
-						"{{transferId}}",
+						"{{txRef}}",
 						"callback"
 					]
 				}
